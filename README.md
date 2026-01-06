@@ -85,3 +85,4 @@ Tailwind animations are defined in `tailwind.config.cjs`:
 ## License
 
 This project is personal and not licensed for redistribution.
+...

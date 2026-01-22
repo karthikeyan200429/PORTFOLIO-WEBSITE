@@ -7,8 +7,8 @@ import { UpArrowIcon } from './components/Icons';
 // A new wrapper component for consistent section styling
 const PageSection: React.FC<{ id: string; title: string; children: React.ReactNode }> = ({ id, title, children }) => (
   <section id={id} className="w-full max-w-4xl mx-auto py-2 sm:py-12 px-1 sm:px-6">
-    <div className="bg-gray-800/70 rounded-2xl shadow-2xl p-12 backdrop-blur-lg border border-white/10">
-      <h2 className="text-4xl font-bold text-white mb-8 border-b-2 border-brand-teal-700 pb-3">{title}</h2>
+    <div className="bg-gray-800/70 rounded-2xl shadow-2xl p-4 sm:p-12 backdrop-blur-lg border border-white/10">
+      <h2 className="text-2xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 border-b-2 border-brand-teal-700 pb-2 sm:pb-3">{title}</h2>
       {children}
     </div>
   </section>
@@ -67,7 +67,7 @@ const App: React.FC = () => {
       
       <main className="relative z-10 flex flex-col items-center">
         {/* Top "hero" section */}
-  <div id="home" className="min-h-[60vh] w-full flex flex-col items-center px-4 pb-4 pt-4 sm:pt-6">
+  <div id="home" className="min-h-[50vh] sm:min-h-[60vh] w-full flex flex-col items-center px-4 pb-4 pt-4 sm:pt-6">
           <PortfolioContent onButtonClick={handleScrollToSection} />
         </div>
 
@@ -85,10 +85,10 @@ const App: React.FC = () => {
       {showBackToTop && (
         <button
           onClick={handleScrollToTop}
-          className="fixed bottom-11 right-6 sm:right-16 z-50 p-3 bg-brand-teal-700 text-white rounded-full shadow-lg hover:scale-110 hover:bg-brand-teal-600 transition-all duration-300 animate-fadeIn"
+          className="fixed bottom-4 sm:bottom-11 right-4 sm:right-6 z-50 p-2 sm:p-3 bg-brand-teal-700 text-white rounded-full shadow-lg hover:scale-110 hover:bg-brand-teal-600 transition-all duration-300 animate-fadeIn"
           aria-label="Back to top"
         >
-          <div className="w-6 h-6">
+          <div className="w-5 h-5 sm:w-6 sm:h-6">
             <UpArrowIcon />
           </div>
         </button>

@@ -55,7 +55,7 @@ export const PortfolioContent: React.FC<PortfolioContentProps> = ({ onButtonClic
           <img
             src="/profile.jpg"
             alt="Karthikeyan Profile"
-            className="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-gray-800 object-cover"
+            className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full border-4 border-gray-800 object-cover"
           />
         </div>
         <h1 

@@ -2,24 +2,24 @@ import React from 'react';
 import { DownloadIcon } from './Icons';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className="mb-8">
-    <h3 className="text-xl font-semibold text-brand-teal-400 mb-3">{title}</h3>
-    <div className="space-y-4 text-gray-300 leading-relaxed">{children}</div>
+  <div className="mb-6 sm:mb-8">
+    <h3 className="text-lg sm:text-xl font-semibold text-brand-teal-400 mb-2 sm:mb-3">{title}</h3>
+    <div className="space-y-3 sm:space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base">{children}</div>
   </div>
 );
 
 const Pill: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <span className="inline-block bg-gray-700 text-brand-teal-300 rounded-full px-4 py-1 text-sm font-medium">
+    <span className="inline-block bg-gray-700 text-brand-teal-300 rounded-full px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium">
         {children}
     </span>
 );
 
 export const ResumePanel: React.FC = () => (
-        <div className="space-y-6">
-            <p className="text-base text-gray-400 text-center">You can view my resume below or download a copy for reference.</p>
+        <div className="space-y-4 sm:space-y-6">
+            <p className="text-sm sm:text-base text-gray-400 text-center">You can view my resume below or download a copy for reference.</p>
             <div
                 className="w-full max-w-xs sm:max-w-3xl mx-auto rounded-md sm:rounded-lg overflow-y-auto scrollbar-thin scrollbar-thumb-brand-teal-400 scrollbar-track-gray-800"
-                style={{height: '700px'}}
+                style={{height: '60vh'}}
             >
                 <iframe
                     src="/Karthikeyan[resume].pdf#toolbar=0"
@@ -28,14 +28,14 @@ export const ResumePanel: React.FC = () => (
                     style={{border: 'none'}}
                 />
             </div>
-            <p className="text-sm text-gray-500 text-center mt-2">Updated: January 2026</p>
-            <p>Download my resume to get a comprehensive overview of my skills, experience, and projects. Please feel free to reach out if you have any questions.</p>
+            <p className="text-xs sm:text-sm text-gray-500 text-center mt-2">Updated: January 2026</p>
+            <p className="text-sm sm:text-base">Download my resume to get a comprehensive overview of my skills, experience, and projects. Please feel free to reach out if you have any questions.</p>
             <a 
                 href="/Karthikeyan[resume].pdf"
                 download
-                className="inline-flex items-center gap-3 px-6 py-3 font-semibold text-white bg-brand-teal-700 rounded-lg shadow-md hover:bg-brand-teal-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-teal-500 focus:ring-opacity-50"
+                className="inline-flex items-center gap-3 px-4 sm:px-6 py-2 sm:py-3 font-semibold text-white bg-brand-teal-700 rounded-lg shadow-md hover:bg-brand-teal-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-teal-500 focus:ring-opacity-50"
             >
-                <div className="w-6 h-6"><DownloadIcon /></div>
+                <div className="w-5 h-5 sm:w-6 sm:h-6"><DownloadIcon /></div>
                 Download Resume (PDF)
             </a>
         </div>
